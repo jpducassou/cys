@@ -1,0 +1,14 @@
+# Ignore the following files/folders withing this proyect:
+*.mo
+*.bak
+*.old
+
+# ignore particular configuration files
+conf/application.conf
+
+# Komodo proyect files
+# v 5.x
+*.kpf
+# v 6.x
+*.komodoproject
+
