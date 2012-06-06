@@ -1,14 +1,21 @@
 # Ignore the following files/folders withing this proyect:
+*.[oa]
+*~
+*.log
+*.swp
+*.cache
+*.db
+*.gz
+*.rar
+*.zip
+*.tar.gz
+*.tar.bz2
 *.mo
+*.tmp
 *.bak
+*.bkp
 *.old
 
 # ignore particular configuration files
 conf/application.conf
-
-# Komodo proyect files
-# v 5.x
-*.kpf
-# v 6.x
-*.komodoproject
 
