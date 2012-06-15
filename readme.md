@@ -9,7 +9,7 @@ Repository layout
 
 * src/
     * page bodies in Markdown format
-* tmpl/
+* includes/
     * templates in Template::Toolkit format
 * htdocs/
     * static resources like images and styles
