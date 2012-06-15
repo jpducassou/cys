@@ -16,6 +16,7 @@
 *.bkp
 *.old
 
-# ignore particular configuration files
-conf/application.conf
+# ignore generated files
+build/
+tmp/
 

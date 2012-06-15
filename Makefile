@@ -8,10 +8,14 @@ BUILD=build
 SRC=src
 TMP=tmp
 
+MD=$(wildcard $(SRC)/*.md)
+HT=$(patsubst $(SRC)/%.md, $(TMP)/%.tmpl.html, $(MD))
+
 # Rules
 default: build
 
 clean:
+	rm -rf $(TMP)
 	rm -rf $(BUILD)
 
 test: build
@@ -20,11 +24,11 @@ test: build
 $(TMP):
 	mkdir $(TMP)
 
-$(SRC)/%.md : $(BUILD)/%.html $(TMP)
+$(TMP)/%.tmpl.html:  $(SRC)/%.md $(TMP)
 	markdown $< > $@
 
-build: $(SRC)/%.md
-	find src -name *.md -type f -execdir markdown {} \> tmp/{}.tmpl.html\;
+build: $(HT)
+	cp -ral htdocs $(BUILD)
 	ttree -f ./conf/ttree.cfg
 
 # markdown src/servicios.md > tmp/servicios.tmpl.html
