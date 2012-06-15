@@ -8,7 +8,7 @@ BUILD=build
 SRC=src
 TMP=tmp
 
-MD=$(wildcard $(SRC)/*.md)
+MD=$(shell find $(SRC)/ -type f -name '*.md')
 HT=$(patsubst $(SRC)/%.md, $(TMP)/%.tmpl.html, $(MD))
 
 # Rules
@@ -25,6 +25,7 @@ $(TMP):
 	mkdir $(TMP)
 
 $(TMP)/%.tmpl.html:  $(SRC)/%.md $(TMP)
+	mkdir -p "$(@D)"
 	markdown $< > $@
 
 build: $(HT)
