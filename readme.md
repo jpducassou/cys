@@ -8,24 +8,22 @@ Repository layout
 -----------------
 
 * src/
-    * page bodies in Markdown format
+	* page bodies in Markdown format
 * includes/
-    * templates in Template::Toolkit format
-* htdocs/
-    * static resources like images and styles
+	* templates in Template::Toolkit format
+* static/
+	* static resources like images and styles
 * t/
-    * tests
-* build/ (Not stored)
-    * output
+	* tests
+* htdocs/ (Not stored)
+	* output
 * conf/
-    * Configuration goes here
+	* Configuration goes here
+* lib/
+	* php libraries
 
 Requirements
 ------------
-
-GNU bash, make, gettext-runtime, gettext-tools.
-
-Perl and additional CPAN modules.
 
 For building:
 
