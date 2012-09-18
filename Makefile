@@ -4,7 +4,7 @@
 	test
 
 # Constants and definitions
-BUILD=build
+BUILD=htdocs
 SRC=src
 TMP=tmp
 
@@ -29,7 +29,7 @@ $(TMP)/%.tmpl.html:  $(SRC)/%.md $(TMP)
 	markdown $< > $@
 
 build: $(HT)
-	cp -ral htdocs $(BUILD)
+	cp -ral static $(BUILD)
 	ttree -f ./conf/ttree.cfg
 
 # markdown src/servicios.md > tmp/servicios.tmpl.html

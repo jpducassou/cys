@@ -17,6 +17,6 @@
 *.old
 
 # ignore generated files
-build/
+htdocs/
 tmp/
 
